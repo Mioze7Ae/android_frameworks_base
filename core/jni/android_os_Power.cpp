@@ -93,13 +93,13 @@ static void android_os_Power_reboot(JNIEnv *env, jobject clazz, jstring reason)
         reboot(RB_AUTOBOOT);
     } else {
         const char *chars = env->GetStringUTFChars(reason, NULL);
-	if (strncmp(chars, "recovery", 8) == 0) {
-	  (void)fopen("/cache/.boot_to_or", "w");
-	  reboot(RB_AUTOBOOT);
-	} else {
-	  __reboot(LINUX_REBOOT_MAGIC1, LINUX_REBOOT_MAGIC2,
-		   LINUX_REBOOT_CMD_RESTART2, (char*) chars);
-	}
+        if (strncmp(chars, "recovery", 8) == 0) {
+            (void)fopen("/cache/.boot_to_or", "w");
+            reboot(RB_AUTOBOOT);
+        } else {
+            __reboot(LINUX_REBOOT_MAGIC1, LINUX_REBOOT_MAGIC2,
+                     LINUX_REBOOT_CMD_RESTART2, (char*) chars);
+        }
         env->ReleaseStringUTFChars(reason, chars);  // In case it fails.
     }
     jniThrowIOException(env, errno);
