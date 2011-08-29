@@ -62,7 +62,7 @@ public class LightsService {
     private final Light mLights[] = new Light[LIGHT_ID_COUNT];
 
     private static final String FLASHLIGHT_FILE;
-    private static final String FLASHLIGHT_FILE_SPOTLIGHT = "/sys/class/leds/spotlight/brightness";
+    private static final String FLASHLIGHT_FILE_SPOTLIGHT = "/sys/class/leds/af-led/brightness";
     static {
         File ff = new File(FLASHLIGHT_FILE_SPOTLIGHT);
         if (ff.exists()) {
