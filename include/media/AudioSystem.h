@@ -485,6 +485,9 @@ public:
     static const char *keyFmOn;
     static const char *keyFmOff;
 #endif
+    static const char *keyFMLaunch;
+    static const char *keyFMRouting;
+    static const char *keyHDMIRouting;
 
     String8 toString();
 

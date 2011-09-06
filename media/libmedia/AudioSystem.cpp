@@ -817,6 +817,9 @@ const char *AudioParameter::keyFrameCount = "frame_count";
 const char *AudioParameter::keyFmOn = "fm_on";
 const char *AudioParameter::keyFmOff = "fm_off";
 #endif
+const char *AudioParameter::keyFMLaunch = "";
+const char *AudioParameter::keyFMRouting = "";
+const char *AudioParameter::keyHDMIRouting = "";
 
 AudioParameter::AudioParameter(const String8& keyValuePairs)
 {
