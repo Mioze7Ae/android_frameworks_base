@@ -140,6 +140,7 @@ static const KeycodeLabel KEYCODES[] = {
     { "FUNC_8", 99 },
     { "QUECHAR", 100 },
 #endif
+    { "MEDIA_MODE", 92 },    // Add ModeChange key of Media - jtq784
 
     // NOTE: If you add a new keycode here you must also add it to:
     //   (enum KeyCode, in this file)
@@ -244,7 +245,7 @@ typedef enum KeyCode {
     kKeyCodePreviousSong = 88,
     kKeyCodeRewind = 89,
     kKeyCodeForward = 90,
-    kKeyCodeMute = 91,
+    kKeyCodeMute = 91
 } KeyCode;
 
 static const KeycodeLabel FLAGS[] = {
