@@ -159,9 +159,6 @@ public:
         MODE_NORMAL = 0,
         MODE_RINGTONE,
         MODE_IN_CALL,
-//#if defined(MOT_FEAT_ENABLE_FM_RADIO)
-        MODE_FM,
-//#endif
         NUM_MODES  // not a valid entry, denotes end-of-list
     };
 
@@ -488,11 +485,10 @@ public:
     static const char *keyFmOn;
     static const char *keyFmOff;
 #endif
-//#if defined(MOT_FEAT_ENABLE_FM_RADIO)
     static const char *keyFMLaunch;
     static const char *keyFMRouting;
     static const char *keyHDMIRouting;
-//#endif
+
     String8 toString();
 
     status_t add(const String8& key, const String8& value);
